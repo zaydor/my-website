@@ -32,3 +32,6 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+
+      # build project for branch
+      - run: ./ci/deploy.sh
