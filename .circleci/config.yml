@@ -32,3 +32,7 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+
+      # build project for branch
+      # this will allow auto deployment after submitting code to github
+#      - run: ./ci/deploy.sh
