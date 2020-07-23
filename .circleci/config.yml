@@ -34,4 +34,5 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # build project for branch
-      - run: ./ci/deploy.sh
+      # this will allow auto deployment after submitting code to github
+#      - run: ./ci/deploy.sh
