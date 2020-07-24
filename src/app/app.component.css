@@ -1,49 +1,9 @@
+/*
+  Universal sizes
+ */
+
 html, body {
   scroll-behavior: smooth;
-}
-
-.title {
-  font-size: 32px;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  font-family: "Calibri", serif;
-}
-
-.sub-links {
-  margin: 5px;
-  font-size: 37px;
-  display: inline-flex;
- }
-
-#box {
-   position: absolute;
-   right: 0;
-   top: 10px;
- }
-#box2 {
-  position: absolute;
-  left: 21vw;
-  right: 20vw;
-  top: 105%;
-}
-
-.dialogs1 {
-  height: 100%;
-  margin: 20px;
-  width: 200px;
-  position: relative;
-  padding: 10px;
-  border: 2px solid pink;
-}
-
-.dialogs2 {
-  margin: 20px;
-  width: 100%;
-  position: relative;
-  padding: 10px;
-  border: 2px solid pink;
-  box-shadow:  -1px 1px 0 pink,
-  -2px 2px pink;
 }
 
 a {
@@ -58,10 +18,6 @@ a:hover
 
 }
 
-.github-image:hover {
-  opacity: 0.5;
-}
-
 .list-images {
   opacity: 0.5;
 }
@@ -71,73 +27,16 @@ a:hover
   cursor: pointer;
 }
 
-.picture:hover {
-  border: 2px solid pink;
-  box-shadow:  -1px 1px 0 pink,
-  -2px 2px pink,
-  -3px 3px red,
-  -4px 4px red,
-  -5px 5px red,
-  -6px 6px red,
-  -7px 7px blue,
-  -8px 8px blue,
-  -9px 9px blue,
-  -10px 10px blue;
-}
-
-#openTitle {
-  cursor: default;
-  color: white;
-  text-shadow: -3px 3px 0 black,
-  3px -3px 0 black,
-  3px 3px 0 black,
-  -3px -3px 0 black,
-  0 3px black,
-  3px 0 black,
-  0 -3px black,
-  -3px 0 black;
-}
-
-#openMessage {
-  cursor: default;
-  font-size: 40px;
-  color: white;
-  text-shadow: -2px 2px 0 black,
-  2px -2px 0 black,
-  2px 2px 0 black,
-  -2px -2px 0 black,
-  0 2px black,
-  2px 0 black,
-  0 -2px black,
-  -2px 0 black;
-}
-
-#titlePos {
-  position: absolute;
-  left: 30%;
-  top: 30%;
-}
-
-#scrollPos {
-  position: absolute;
-  margin-left: 50%;
-  margin-right: 50%;
-  bottom: 20px;
-}
-#scrollWords {
-  cursor: default;
-  position: relative;
-  font-size: 20px;
-  bottom: 10px;
-  color: white;
-  text-shadow: -1px 1px 0 black,
-  -2px 2px 0 black;
-
-}
-
 #scrollBtn {
   position: relative;
   bottom: 20px;
+}
+
+.title {
+  font-size: 28px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-family: "Calibri", serif;
 }
 
 .btn {
@@ -154,6 +53,201 @@ a:hover
   width: 100%;
 }
 
-#sub1, #sub2 {
-  font-size: 16px;
+/*
+  Covers size '4' screens
+ */
+
+#name4 {
+  position: absolute;
+  top: 46vh;
+  left: 43vw;
+}
+
+.sub-links4 {
+  margin: 5px;
+  font-size: 37px;
+  display: inline-flex;
+ }
+
+#box4 {
+  position: absolute;
+  left: 21vw;
+  right: 20vw;
+  top: 105%;
+}
+
+#scrollPos4 {
+  position: absolute;
+  margin-left: 49%;
+  margin-right: 50%;
+  bottom: 20px;
+  left: -1vw;
+}
+
+#contactBox4 {
+  position: relative;
+  left: 24vw;
+  margin-bottom: 40px;
+  max-width: 190px;
+}
+
+/*
+  Covers size '3' screens
+ */
+
+#name3 {
+  position: absolute;
+  top: 46vh;
+  left: 38vw;
+}
+
+.sub-links3 {
+  margin: 5px;
+  font-size: 37px;
+  display: inline-flex;
+}
+
+#box3 {
+  position: absolute;
+  left: 21vw;
+  right: 20vw;
+  top: 105%;
+}
+
+#scrollPos3 {
+  position: absolute;
+  margin-left: 46%;
+  margin-right: 50%;
+  bottom: 20px;
+}
+
+#contactBox3 {
+  position: relative;
+  left: 21vw;
+  margin-bottom: 40px;
+  max-width: 190px;
+}
+
+/*
+  Covers size '2' screens
+ */
+
+#name2 {
+  position: absolute;
+  top: 46vh;
+  left: 35vw;
+}
+
+.sub-links2 {
+  margin: 5px;
+  font-size: 37px;
+  display: inline-flex;
+}
+
+#box2 {
+  position: absolute;
+  left: 21vw;
+  right: 20vw;
+  top: 105%;
+}
+
+#scrollPos2 {
+  position: absolute;
+  margin-left: 45%;
+  margin-right: 50%;
+  bottom: 20px;
+}
+
+#contactBox2 {
+  position: relative;
+  left: 18vw;
+  margin-bottom: 40px;
+}
+
+/*
+  Covers size '1' screens
+ */
+
+#name1 {
+  position: absolute;
+  top: 46vh;
+  left: 25vw;
+}
+
+.title1 {
+  font-size: 32px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-family: "Calibri", serif;
+}
+
+.sub-links1 {
+  margin: 5px;
+  font-size: 37px;
+  display: inline-flex;
+}
+
+#box1 {
+  position: absolute;
+  left: 21vw;
+  right: 20vw;
+  top: 105%;
+}
+
+#scrollPos1 {
+  position: absolute;
+  margin-left: 43%;
+  margin-right: 50%;
+  bottom: 20px;
+}
+
+#contactBox1 {
+  position: relative;
+  left: 14vw;
+  margin-bottom: 40px;
+}
+
+.image1 {
+  width: 200px
+}
+
+/*
+  Covers size '0' screens
+ */
+
+#name0 {
+  position: absolute;
+  top: 46vh;
+  left: 20vw;
+}
+
+.sub-links0 {
+  margin: 5px;
+  font-size: 37px;
+  display: inline-flex;
+}
+
+#box0 {
+  position: absolute;
+  left: 21vw;
+  right: 20vw;
+  top: 130%;
+}
+
+#scrollPos0 {
+  position: absolute;
+  margin-left: 50%;
+  margin-right: 50%;
+  bottom: 20px;
+  left: -6vw;
+}
+
+#contactBox0 {
+  position: relative;
+  left: 9vw;
+  margin-bottom: 40px;
+}
+
+.image0 {
+  width: 200px
 }

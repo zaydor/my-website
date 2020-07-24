@@ -10,10 +10,13 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {SizeDetectorComponent} from './size-detector.component';
+import {ResizeService} from './resize.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SizeDetectorComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatTooltipModule,
     MatGridListModule
   ],
-  providers: [],
+  providers: [ResizeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
