@@ -1,6 +1,5 @@
 import {AfterViewInit, OnInit, Component, ElementRef} from '@angular/core';
 import { HostListener } from '@angular/core';
-import {ifError} from 'assert';
 import {delay} from 'rxjs/operators';
 
 @Component({
@@ -9,10 +8,23 @@ import {delay} from 'rxjs/operators';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements AfterViewInit, OnInit{
-  title = 'my-portfolio';
   screenHeight: number;
   screenWidth: number;
   goodFont = '48px';
+  colorIndex: number;
+  colorGroups = [
+    {bg: '#343837', title: '#03719C'},
+    {bg: '#C6FCFF', title: '#9900FA'},
+    {bg: '#FDC1C5', title: '#107AB0'},
+    {bg: '#070D0D', title: '#B30049'},
+    {bg: '#7BC8F6', title: '#FEB2D0'},
+    {bg: '#475F94', title: '#FDDC5C'},
+    {bg: '#8F8CE7', title: '#D8DCD6'},
+    {bg: '#3E82FC', title: '#FE2C54'},
+    {bg: '#825F87', title: '#2DFE54'},
+    {bg: '#FF7052', title: '#fff'},
+    {bg: '#5D1451', title: '#04D9FF'}
+  ];
 
   constructor(private elementRef: ElementRef){
     this.onResize();
@@ -21,10 +33,11 @@ export class AppComponent implements AfterViewInit, OnInit{
   ngOnInit() {
     this.screenWidth = window.innerWidth;
     this.changeSize(this.screenWidth);
+    this.colorIndex = this.getRandomInt();
   }
 
   ngAfterViewInit(): void {
-    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = 'rgb(101,254,252)';
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = this.colorGroups[this.colorIndex].bg;
     document.getElementById('openTitle').style.fontSize = this.goodFont;
     this.screenWidth = window.innerWidth;
     this.changeSize(this.screenWidth);
@@ -38,6 +51,10 @@ export class AppComponent implements AfterViewInit, OnInit{
       await delay(1000);
       this.changeSize(this.screenWidth);
     })();
+  }
+
+  getRandomInt(): number {
+    return Math.floor(Math.random() * (11));
   }
 
   changeSize(width) { // openTitle initially 48, openMessage initially 40
@@ -156,5 +173,13 @@ export class AppComponent implements AfterViewInit, OnInit{
       top: 1000,
       behavior: 'smooth'
     });
+  }
+
+  getTitleColor() {
+    return this.colorGroups[this.colorIndex].title;
+  }
+
+  getBGColor() {
+    return this.colorGroups[this.colorIndex].bg;
   }
 }
