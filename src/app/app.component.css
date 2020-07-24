@@ -22,8 +22,8 @@ html, body {
  }
 #box2 {
   position: absolute;
-  left: 20%;
-  right: 20%;
+  left: 21vw;
+  right: 20vw;
   top: 105%;
 }
 
@@ -34,17 +34,6 @@ html, body {
   position: relative;
   padding: 10px;
   border: 2px solid pink;
-  box-shadow:  -1px 1px 0 pink,
-  -2px 2px pink,
-  -3px 3px red,
-  -4px 4px red,
-  -5px 5px red,
-  -6px 6px red,
-  -7px 7px blue,
-  -8px 8px blue,
-  -9px 9px blue,
-  -10px 10px blue;
-
 }
 
 .dialogs2 {
@@ -54,16 +43,7 @@ html, body {
   padding: 10px;
   border: 2px solid pink;
   box-shadow:  -1px 1px 0 pink,
-  -2px 2px pink,
-  -3px 3px red,
-  -4px 4px red,
-  -5px 5px red,
-  -6px 6px red,
-  -7px 7px blue,
-  -8px 8px blue,
-  -9px 9px blue,
-  -10px 10px blue;
-
+  -2px 2px pink;
 }
 
 a {
@@ -159,6 +139,7 @@ a:hover
   position: relative;
   bottom: 20px;
 }
+
 .btn {
   color: #fff;
   cursor: pointer;
@@ -171,53 +152,6 @@ a:hover
   text-decoration: none;
   text-transform: uppercase;
   width: 100%;
-  text-shadow: -1px 1px 0 black,
-  -2px 2px 0 black;
-}
-
-
-.btn:hover { text-decoration: none;
-  color: white;
-}
-
-.btn-2:after,
-.btn-2:before {
-  visibility: hidden;
-  border: 1px solid white;
-  bottom: 0;
-  content: " ";
-  display: block;
-  margin: 0 auto;
-  position: relative;
-  transition: all 280ms ease-in-out;
-  width: 0;
-  box-shadow: -1px 1px 0 pink,
-  -2px 2px 0 pink,
-  -3px 3px 0 red,
-  -4px 4px 0 red,
-  -5px 5px 0 blue,
-  -6px 6px 0 blue;
-}
-
-.btn-2:hover:after,
-.btn-2:hover:before {
-  transition-delay: 5s;
-  visibility: visible;
-  border-color: #fff;
-  transition: width 350ms ease-in-out;
-  width: 70%;
-  box-shadow: -1px 1px 0 pink,
-  -2px 2px 0 pink,
-  -3px 3px 0 red,
-  -4px 4px 0 red,
-  -5px 5px 0 blue,
-  -6px 6px 0 blue;
-}
-
-.btn-2:hover:before {
-  bottom: auto;
-  top: 0;
-  width: 70%;
 }
 
 #sub1, #sub2 {
