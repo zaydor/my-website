@@ -1,46 +1,48 @@
+<app-size-detector></app-size-detector>
+
 <div>
-  <div style="position: absolute; top: 46vh; left: 43vw">
-    <h1 style="font-size: 100px; color:{{getTitleColor()}}"><b>Isaiah</b></h1>
+  <div id="name{{this.screenSize}}">
+    <h1 style="font-size: 100px; {{'color: ' + getTitleColor()}}"><b>Isaiah</b></h1>
   </div>
-  <div id="scrollPos" style="position: absolute; left: -1vw;">
+  <div id="scrollPos{{this.screenSize}}">
     <div id="scrollBtn">
-      <a class="btn" style="z-index: 20; color:{{getTitleColor()}}; font-size: 18px; box-shadow:{{getTitleColor()}}" (click)="scrollToBottom()"><span>Scroll</span></a>
+      <a class="btn" style="z-index: 20; {{'color: ' + getTitleColor()}}; font-size: 18px;" (click)="scrollToBottom()"><span>Scroll</span></a>
     </div>
   </div>
 
-  <div id="box2">
-    <div style="position: relative; left: 23vw; max-width: 250px; margin-bottom: 40px">
-    <mat-card style="background-color:{{getBGColor()}}; max-width: 190px">
+  <div id="box{{this.screenSize}}">
+    <div id="contactBox{{this.screenSize}}">
+    <mat-card style="{{'background-color: ' + getBGColor()}}; max-width: 190px">
       <mat-card-header>
-        <mat-card-title class="title" style="color:{{getTitleColor()}}">Contact Me</mat-card-title>
-        <mat-card-subtitle style="display: inline-flex; margin: 2px">
-          <a href="mailto: isaiahdorado@gmail.com" class="sub-links" rel="noreferrer">
-            <mat-icon [inline]="true" matTooltip="Email" style="color:{{getTitleColor()}}">mail</mat-icon>
+        <mat-card-title class="title" style="{{'color: ' + getTitleColor()}}; transform: translateX(-4px)">Contact Me</mat-card-title>
+        <mat-card-subtitle style="display: inline-flex; margin: 2px; transform: translateX(-10px)">
+          <a href="mailto: isaiahdorado@gmail.com" class="sub-links{{this.screenSize}}" rel="noreferrer">
+            <mat-icon [inline]="true" matTooltip="Email" style="{{'color: ' + getTitleColor()}}">mail</mat-icon>
           </a>
-          <a href="https://www.linkedin.com/in/isaiah-dorado/" target="_blank" class="sub-links" rel="noreferrer">
-            <mat-icon [inline]="true" matTooltip="LinkedIn" style="color:{{getTitleColor()}}">account_circle</mat-icon>
+          <a href="https://www.linkedin.com/in/isaiah-dorado/" target="_blank" class="sub-links{{this.screenSize}}" rel="noreferrer">
+            <mat-icon [inline]="true" matTooltip="LinkedIn" style="{{'color: ' + getTitleColor()}}">account_circle</mat-icon>
           </a>
-          <a href="https://github.com/zaydor" target="_blank" class="sub-links" rel="noreferrer">
-            <mat-icon [inline]="true" matTooltip="GitHub" style="color:{{getTitleColor()}}">code</mat-icon>
+          <a href="https://github.com/zaydor" target="_blank" class="sub-links{{this.screenSize}}" rel="noreferrer">
+            <mat-icon [inline]="true" matTooltip="GitHub" style="{{'color: ' + getTitleColor()}}">code</mat-icon>
           </a>
         </mat-card-subtitle>
       </mat-card-header>
     </mat-card>
   </div>
-    <mat-grid-list cols="2" rowHeight="2:1" gutterSize="50px">
+    <mat-grid-list cols="2" rowHeight="{{getRowHeight()}}" gutterSize="{{getGutterSize()}}">
       <mat-grid-tile style="border: solid 2px {{getTitleColor()}}" matTooltip="Download my resume" matTooltipPosition="left">
-        <a id="sub1" href="../assets/DoradoIsaiahResume2020.pdf" download style="color:{{getTitleColor()}}; font-size: 30px">Download Resume</a>
+        <a href="../assets/DoradoIsaiahResume2020.pdf" download style="{{'color: ' + getTitleColor()}}; font-size: 20px; text-align: center">Download Resume</a>
       </mat-grid-tile>
       <mat-grid-tile matTooltip="4DVD Research" matTooltipPosition="right">
         <a href="http://4dvd.sdsu.edu/" target="_blank" rel="noreferrer">
-          <img  src="../assets/4DVDLogoV1.webp" class="list-images" alt="4DVD">
+          <img class="image{{this.screenSize}}" src="../assets/4DVDLogoV1.webp" class="list-images" alt="4DVD">
         </a>
       </mat-grid-tile>
-      <mat-grid-tile [colspan]="1" style="border: solid 2px {{getTitleColor()}}; font-size: 30px" matTooltip="Under Construction" matTooltipPosition="left">
-        <a style="color:{{getTitleColor()}}">Under Construction</a>
+      <mat-grid-tile [colspan]="1" style="border: solid 2px {{getTitleColor()}}; font-size: 20px; text-align: center" matTooltip="Under Construction" matTooltipPosition="left">
+        <a style="{{'color: ' + getTitleColor()}}">Under Construction</a>
       </mat-grid-tile>
-      <mat-grid-tile [colspan]="1" style="border: solid 2px {{getTitleColor()}}; font-size: 30px" matTooltip="Under Construction" matTooltipPosition="right">
-        <a style="color:{{getTitleColor()}}">Under Construction</a>
+      <mat-grid-tile [colspan]="1" style="border: solid 2px {{getTitleColor()}}; font-size: 20px; text-align: center" matTooltip="Under Construction" matTooltipPosition="right">
+        <a style="{{'color: ' + getTitleColor()}}">Under Construction</a>
       </mat-grid-tile>
     </mat-grid-list>
   </div>
