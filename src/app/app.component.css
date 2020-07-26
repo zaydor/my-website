@@ -33,7 +33,7 @@ a:hover
 }
 
 .title {
-  font-size: 28px;
+  font-size: 24px;
   margin-top: 5px;
   margin-bottom: 15px;
   font-family: "Calibri", serif;
@@ -218,7 +218,7 @@ a:hover
 #name0 {
   position: absolute;
   top: 46vh;
-  left: 20vw;
+  left: 19vw;
 }
 
 .sub-links0 {
@@ -236,7 +236,7 @@ a:hover
 
 #scrollPos0 {
   position: absolute;
-  margin-left: 50%;
+  margin-left: 46%;
   margin-right: 50%;
   bottom: 20px;
   left: -6vw;
